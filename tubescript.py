@@ -12,9 +12,9 @@ def download(url: str) -> None:
             download_video(yt)
         else:
             download_audio(audiofile)
-    except RegexMatchError as e:
+    except RegexMatchError:
         print("The link you entered is invalid")
-    except VideoUnavailable as e:
+    except VideoUnavailable:
         print("Video not available")
 
 
